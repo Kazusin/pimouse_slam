@@ -1,6 +1,7 @@
 <launch>
   <arg name="scan_topic" default "/scan"/>
   <arg name="odom_topic" default "/odom"/>
+  <node pkg="joy" type="joy_node" name="joy_node"/>
   
   <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
     <param name="base_frame" value="base_link"/>
